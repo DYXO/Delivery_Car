@@ -12,7 +12,8 @@ Terminal input
 ```
 ros2 launch rplidar_ros test_gmapping.launch.py
 ```
-[link](https://photos.google.com/photo/AF1QipPt1PcGm9cOzbyYILMKcHNFHPSgXC7eah9KfOwm)
+![1](https://github.com/DYXO/Delivery_Car/assets/166942680/9c8a6f01-5e79-4253-9e8a-f528c8180a9b)
+
 ## View node communication
 
 Terminal input
