@@ -27,8 +27,6 @@ Terminal input
 ros2 run tf2_tools view_frames.py
 ```
 A frames.pdf file will be generated in the directory where the command terminal is started.
-## launch file analysis
-
 # Navigation and obstacle avoidance
 
 This chapter needs to be used with a car chassis and other sensors to operate. 
