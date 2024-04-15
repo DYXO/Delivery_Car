@@ -46,7 +46,7 @@ After the program is started, rviz will be opened to display the map. By setting
 Navigation2 file：**[link](https://navigation.ros.org/index.html)**
 Plug-ins provided by Navigation2：**[link](https://navigation.ros.org/plugins/index.html#plugins)**
 Navigation2 overall architecture diagram:
-[link](https://photos.google.com/photo/AF1QipPsUacKplDWAq1mli0hT-7JeEQhGQrbI65_znCz)
+![image](https://github.com/DYXO/Delivery_Car/assets/166942680/2f04bb02-4c63-4513-8965-9336fa40771e)
 Take ros2-foxy as an example, enter in the terminal,
 ```
 sudo apt install ros-foxy-nav2-* -y
