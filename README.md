@@ -29,67 +29,6 @@ ros2 run tf2_tools view_frames.py
 A frames.pdf file will be generated in the directory where the command terminal is started.
 ## launch file analysis
 
-File path (combined with virtual machine):
-
-```
-/home/yahboom/rplidar_ws/src/rplidar_ros-dev-ros2/launch/test_gmapping.launch.py
-```
-
-test_gmapping.launch.py
-```
-from launch import LaunchDescription
-from launch_ros.actions import Node
-import os
-from launch.actions import IncludeLaunchDescription
-from launch.conditions import
-LaunchConfigurationEquals,LaunchConfigurationNotEquals
-from launch.launch_description_sources import
-PythonLaunchDescriptionSource,AnyLaunchDescriptionSource
-from ament_index_python.packages import get_package_share_directory
-from launch.actions import DeclareLaunchArgument
-import os
-def generate_launch_description():
-LIDAR_TYPE = os.getenv('LIDAR_TYPE')
-lidar_type_arg = DeclareLaunchArgument(name='lidar_type',
-default_value=LIDAR_TYPE, description='The type of lidar')
-lidar_launch =
-IncludeLaunchDescription(PythonLaunchDescriptionSource([os.path.join(get_package
-_share_directory('rplidar_ros'), 'launch'),'/lidar.launch.py']))
-s2_gmapping_launch =
-IncludeLaunchDescription(PythonLaunchDescriptionSource([os.path.join(get_package
-_share_directory('slam_gmapping'),
-'launch'),'/s2_gmapping_launch.py']),condition=LaunchConfigurationEquals('lidar_
-type', 's2'))
-gmapping_launch =
-IncludeLaunchDescription(PythonLaunchDescriptionSource([os.path.join(get_package
-_share_directory('slam_gmapping'),
-'launch'),'/gmapping_launch.py']),condition=LaunchConfigurationNotEquals('lidar_
-type', 's2'))
-s2_slam_gmapping_launch =
-IncludeLaunchDescription(PythonLaunchDescriptionSource([os.path.join(get_package
-_share_directory('slam_gmapping'),
-'launch'),'/s2_slam_gmapping.launch.py']),condition=LaunchConfigurationEquals('l
-idar_type', 's2'))
-slam_gmapping_launch =
-IncludeLaunchDescription(PythonLaunchDescriptionSource([os.path.join(get_package
-_share_directory('slam_gmapping'),
-'launch'),'/slam_gmapping.launch.py']),condition=LaunchConfigurationNotEquals('l
-idar_type', 's2'))
-return LaunchDescription([
-lidar_type_arg,
-lidar_launch,
-s2_gmapping_launch,
-s2_slam_gmapping_launch,
-gmapping_launch,
-slam_gmapping_launch
-])
-
-```
-[lidar_type_arg] Gets the value of [LIDAR_TYPE] set in the environment variable, and starts the corresponding radar and corresponding mapping instructions based on this value
-
-
-[lidar_type_arg] Gets the value of [LIDAR_TYPE] set in the environment variable, and starts the corresponding radar and corresponding mapping instructions based on this value.
-
 # Navigation and obstacle avoidance
 
 This chapter needs to be used with a car chassis and other sensors to operate. 
