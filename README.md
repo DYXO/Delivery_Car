@@ -39,7 +39,7 @@ After the program is started, rviz will be opened to display the map. By setting
 
 ## Car chassis pictures
 
-[link](https://photos.google.com/photo/AF1QipMpIJyCc6HuDZ9qX75VvStGX0aj80PHJ2w2qLn9)
+![2](https://github.com/DYXO/Delivery_Car/assets/166942680/90b629d5-17f5-4ee4-8a55-03e151761e9a)
 
 ## Introduction to Navigation2
 
