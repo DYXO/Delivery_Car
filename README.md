@@ -58,4 +58,110 @@ _share_directory('rplidar_ros'), 'launch'),'/lidar.launch.py']))
 s2_gmapping_launch =
 IncludeLaunchDescription(PythonLaunchDescriptionSource([os.path.join(get_package
 _share_directory('slam_gmapping'),
-'launch'),'/s2_gmapping_launch.py']),condition=LaunchConfiguration
+'launch'),'/s2_gmapping_launch.py']),condition=LaunchConfigurationEquals('lidar_
+type', 's2'))
+gmapping_launch =
+IncludeLaunchDescription(PythonLaunchDescriptionSource([os.path.join(get_package
+_share_directory('slam_gmapping'),
+'launch'),'/gmapping_launch.py']),condition=LaunchConfigurationNotEquals('lidar_
+type', 's2'))
+s2_slam_gmapping_launch =
+IncludeLaunchDescription(PythonLaunchDescriptionSource([os.path.join(get_package
+_share_directory('slam_gmapping'),
+'launch'),'/s2_slam_gmapping.launch.py']),condition=LaunchConfigurationEquals('l
+idar_type', 's2'))
+slam_gmapping_launch =
+IncludeLaunchDescription(PythonLaunchDescriptionSource([os.path.join(get_package
+_share_directory('slam_gmapping'),
+'launch'),'/slam_gmapping.launch.py']),condition=LaunchConfigurationNotEquals('l
+idar_type', 's2'))
+return LaunchDescription([
+lidar_type_arg,
+lidar_launch,
+s2_gmapping_launch,
+s2_slam_gmapping_launch,
+gmapping_launch,
+slam_gmapping_launch
+])
+
+```
+[lidar_type_arg] Gets the value of [LIDAR_TYPE] set in the environment variable, and starts the corresponding radar and corresponding mapping instructions based on this value
+
+
+[lidar_type_arg] Gets the value of [LIDAR_TYPE] set in the environment variable, and starts the corresponding radar and corresponding mapping instructions based on this value.
+
+# Navigation and obstacle avoidance
+
+This chapter needs to be used with a car chassis and other sensors to operate. 
+
+
+## Program function description
+
+After the program is started, rviz will be opened to display the map. By setting the target point, single-point and multi-point navigation of the car can be achieved.
+
+## Car chassis pictures
+
+[link](https://photos.google.com/photo/AF1QipMpIJyCc6HuDZ9qX75VvStGX0aj80PHJ2w2qLn9)
+
+## Introduction to Navigation2
+
+Navigation2 file：**[link](https://navigation.ros.org/index.html)**
+Plug-ins provided by Navigation2：**[link](https://navigation.ros.org/plugins/index.html#plugins)**
+Navigation2 overall architecture diagram:
+[link](https://photos.google.com/photo/AF1QipPsUacKplDWAq1mli0hT-7JeEQhGQrbI65_znCz)
+Take ros2-foxy as an example, enter in the terminal,
+```
+sudo apt install ros-foxy-nav2-* -y
+```
+
+## code path
+
+launch source code. The location of the function source code is located in the supporting virtual machine.
+```
+~/rplidar_ws/src/yahboomcar_nav/launch
+```
+
+
+# Program start
+
+
+## Start rviz display
+
+
+Terminal input,
+```
+ros2 launch yahboomcar_rviz yahboomcar_nav_launch.py
+```
+At this time, the map will not be displayed on the screen, and there is no need to worry about the red topics of each node on the left, because the navigation node has not been started yet.
+
+
+
+## Start the radar chassis
+
+
+Terminal input,
+```
+ros2 launch yahboomcar_nav laser_bringup_launch.py
+```
+
+## Start navigation node
+
+Terminal input,
+```
+ros2 launch yahboomcar_nav navigation_dwb_launch.py
+```
+The DWB navigation algorithm is used here.
+A map appears in rviz. Click [2D Pose Estimate] on rviz, then compare the pose of the car and mark an initial pose for the car on the map;
+Compare the overlap between the radar scanning point and the obstacle, and set the initial pose of the car multiple times until the radar scanning point and the obstacle roughly overlap;
+
+## Single point navigation
+
+
+After the initial pose is set, you can click [2D Goal Pose] to set a navigation target point, and the car will start single-point navigation;
+
+
+## Multi-point navigation
+
+
+After the initial pose is set, click [Waypoint mode] in the lower left corner, and then click [Navigation2 Goal] on rviz to mark a target point on the map. Click [Navigation2 Goal] again to mark a second goal on the map. Click, and continue to cycle, you can mark multiple target points at one time
+After marking multiple target points, click [Start Navigation] to start multi-point navigation;
