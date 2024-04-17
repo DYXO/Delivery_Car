@@ -1,6 +1,46 @@
 #  A smart delivery cart
 
 
+# Compile & Install sllidar_ros2 package
+```
+ros2 launch sllidar_ros2 view_sllidar_c1_launch.py
+```
+
+Clone sllidar_ros2 package from github
+
+Ensure you're still in the ros2_ws/src directory before you clone:
+```
+git clone https://github.com/Slamtec/sllidar_ros2.git
+```
+Build sllidar_ros2 package
+
+From the root of your workspace (ros2_ws), you can now build sllidar_ros2 package using the command:
+```
+cd ~/ros2_ws/
+source /opt/ros/<rosdistro>/setup.bash
+colcon build --symlink-install
+```
+if you find output like "colcon:command not found",you need separate [install colcon](https://docs.ros.org/en/foxy/Tutorials/Colcon-Tutorial.html#install-colcon) build tools.
+Package environment setup
+```
+source ./install/setup.bash
+```
+Note: Add permanent workspace environment variables. It's convenientif the ROS2 environment variables are automatically added to your bash session every time a new shell is launched:
+```
+$echo "source <your_own_ros2_ws>/install/setup.bash" >> ~/.bashrc
+$source ~/.bashrc
+```
+Create udev rules for rplidar
+sllidar_ros2 running requires the read and write permissions of the serial device. You can manually modify it with the following command:
+```
+sudo chmod 777 /dev/ttyUSB0
+
+```
+But a better way is to create a udev rule:
+```
+cd src/rpldiar_ros/
+source scripts/create_udev_rules.sh
+```
 
 # Handheld lidar mapping
 
