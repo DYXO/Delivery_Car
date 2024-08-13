@@ -1,4 +1,4 @@
-#  A smart delivery cart
+# Delivery Car
 
 
 # Compile & Install sllidar_ros2 package
