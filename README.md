@@ -55,8 +55,13 @@ sudo chmod u+s your_program
 Then try again
 ## if still not work, just give up the sound 
 go to the branch IfAudioNotWork or you can just comment out this following lines in main
+line12:
 ```
-sudo chmod u+s your_program
+//soundplayer warning("Sound.wav");
+```
+line12:
+```
+//std::thread warning_sound(&soundplayer::play,&warning);
 ```
 ## Diagram of the hardware connection
 ![image](https://github.com/DYXO/Delivery_Car/blob/main/figure/Connection.png)
