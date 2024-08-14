@@ -1,4 +1,5 @@
 # Delivery Car
+
 This repository has the development process of this part of the project
 https://github.com/DYXO/DeliveryCar.git
 ## Get start
@@ -29,6 +30,10 @@ sudo ./DeliveryRobot
 ```
 
 ## If pcm erro
+<details>
+  <summary>expand</summary>
+
+
 1.Modify ALSA Configuration Files: Edit the ALSA configuration files to allow root access to audio devices. These files are usually located at /etc/asound.conf or ~/.asoundrc. Add or modify the following content:
 ```
 pcm.!default {
@@ -63,6 +68,9 @@ line12:
 ```
 //std::thread warning_sound(&soundplayer::play,&warning);
 ```
+
+</details>
+
 ## Diagram of the hardware connection
 ![image](https://github.com/DYXO/Delivery_Car/blob/main/figure/Connection.png)
 
