@@ -81,12 +81,12 @@ clean: CMakeFiles/DeliveryRobot.dir/clean
 CMakeFiles/DeliveryRobot.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeliveryRobot.dir/build.make CMakeFiles/DeliveryRobot.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeliveryRobot.dir/build.make CMakeFiles/DeliveryRobot.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/DeliveryCar/build/CMakeFiles --progress-num=1,2,3,4 "Built target DeliveryRobot"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/DeliveryCar/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target DeliveryRobot"
 .PHONY : CMakeFiles/DeliveryRobot.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/DeliveryRobot.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/DeliveryCar/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/DeliveryCar/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/DeliveryRobot.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/DeliveryCar/build/CMakeFiles 0
 .PHONY : CMakeFiles/DeliveryRobot.dir/rule

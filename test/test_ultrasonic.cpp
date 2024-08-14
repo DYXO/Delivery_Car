@@ -11,6 +11,11 @@ class PrintDistanceCallback:public UltrasonicCallback
 
 int main(int argc, char *argv[]) 
 {
+	gpioInitialise();
+	/*if(!gpioInitialise())
+	{
+		printf("erro!gpio_init failed!\n");
+	}*/
 	ultrasonic u1;
 	PrintDistanceCallback printdistanceCallback;
 	u1.registerCallback(&printdistanceCallback);

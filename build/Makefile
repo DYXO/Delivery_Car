@@ -129,6 +129,54 @@ DeliveryRobot/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeliveryRobot.dir/build.make CMakeFiles/DeliveryRobot.dir/build
 .PHONY : DeliveryRobot/fast
 
+src/cabinet.o: src/cabinet.cpp.o
+.PHONY : src/cabinet.o
+
+# target to build an object file
+src/cabinet.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeliveryRobot.dir/build.make CMakeFiles/DeliveryRobot.dir/src/cabinet.cpp.o
+.PHONY : src/cabinet.cpp.o
+
+src/cabinet.i: src/cabinet.cpp.i
+.PHONY : src/cabinet.i
+
+# target to preprocess a source file
+src/cabinet.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeliveryRobot.dir/build.make CMakeFiles/DeliveryRobot.dir/src/cabinet.cpp.i
+.PHONY : src/cabinet.cpp.i
+
+src/cabinet.s: src/cabinet.cpp.s
+.PHONY : src/cabinet.s
+
+# target to generate assembly for a file
+src/cabinet.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeliveryRobot.dir/build.make CMakeFiles/DeliveryRobot.dir/src/cabinet.cpp.s
+.PHONY : src/cabinet.cpp.s
+
+src/linetrack.o: src/linetrack.cpp.o
+.PHONY : src/linetrack.o
+
+# target to build an object file
+src/linetrack.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeliveryRobot.dir/build.make CMakeFiles/DeliveryRobot.dir/src/linetrack.cpp.o
+.PHONY : src/linetrack.cpp.o
+
+src/linetrack.i: src/linetrack.cpp.i
+.PHONY : src/linetrack.i
+
+# target to preprocess a source file
+src/linetrack.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeliveryRobot.dir/build.make CMakeFiles/DeliveryRobot.dir/src/linetrack.cpp.i
+.PHONY : src/linetrack.cpp.i
+
+src/linetrack.s: src/linetrack.cpp.s
+.PHONY : src/linetrack.s
+
+# target to generate assembly for a file
+src/linetrack.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeliveryRobot.dir/build.make CMakeFiles/DeliveryRobot.dir/src/linetrack.cpp.s
+.PHONY : src/linetrack.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -177,6 +225,78 @@ src/motor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeliveryRobot.dir/build.make CMakeFiles/DeliveryRobot.dir/src/motor.cpp.s
 .PHONY : src/motor.cpp.s
 
+src/playsound.o: src/playsound.cpp.o
+.PHONY : src/playsound.o
+
+# target to build an object file
+src/playsound.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeliveryRobot.dir/build.make CMakeFiles/DeliveryRobot.dir/src/playsound.cpp.o
+.PHONY : src/playsound.cpp.o
+
+src/playsound.i: src/playsound.cpp.i
+.PHONY : src/playsound.i
+
+# target to preprocess a source file
+src/playsound.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeliveryRobot.dir/build.make CMakeFiles/DeliveryRobot.dir/src/playsound.cpp.i
+.PHONY : src/playsound.cpp.i
+
+src/playsound.s: src/playsound.cpp.s
+.PHONY : src/playsound.s
+
+# target to generate assembly for a file
+src/playsound.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeliveryRobot.dir/build.make CMakeFiles/DeliveryRobot.dir/src/playsound.cpp.s
+.PHONY : src/playsound.cpp.s
+
+src/scanner.o: src/scanner.cpp.o
+.PHONY : src/scanner.o
+
+# target to build an object file
+src/scanner.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeliveryRobot.dir/build.make CMakeFiles/DeliveryRobot.dir/src/scanner.cpp.o
+.PHONY : src/scanner.cpp.o
+
+src/scanner.i: src/scanner.cpp.i
+.PHONY : src/scanner.i
+
+# target to preprocess a source file
+src/scanner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeliveryRobot.dir/build.make CMakeFiles/DeliveryRobot.dir/src/scanner.cpp.i
+.PHONY : src/scanner.cpp.i
+
+src/scanner.s: src/scanner.cpp.s
+.PHONY : src/scanner.s
+
+# target to generate assembly for a file
+src/scanner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeliveryRobot.dir/build.make CMakeFiles/DeliveryRobot.dir/src/scanner.cpp.s
+.PHONY : src/scanner.cpp.s
+
+src/serial.o: src/serial.cpp.o
+.PHONY : src/serial.o
+
+# target to build an object file
+src/serial.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeliveryRobot.dir/build.make CMakeFiles/DeliveryRobot.dir/src/serial.cpp.o
+.PHONY : src/serial.cpp.o
+
+src/serial.i: src/serial.cpp.i
+.PHONY : src/serial.i
+
+# target to preprocess a source file
+src/serial.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeliveryRobot.dir/build.make CMakeFiles/DeliveryRobot.dir/src/serial.cpp.i
+.PHONY : src/serial.cpp.i
+
+src/serial.s: src/serial.cpp.s
+.PHONY : src/serial.s
+
+# target to generate assembly for a file
+src/serial.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeliveryRobot.dir/build.make CMakeFiles/DeliveryRobot.dir/src/serial.cpp.s
+.PHONY : src/serial.cpp.s
+
 src/ultrasonic.o: src/ultrasonic.cpp.o
 .PHONY : src/ultrasonic.o
 
@@ -210,12 +330,27 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... DeliveryRobot"
+	@echo "... src/cabinet.o"
+	@echo "... src/cabinet.i"
+	@echo "... src/cabinet.s"
+	@echo "... src/linetrack.o"
+	@echo "... src/linetrack.i"
+	@echo "... src/linetrack.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
 	@echo "... src/motor.o"
 	@echo "... src/motor.i"
 	@echo "... src/motor.s"
+	@echo "... src/playsound.o"
+	@echo "... src/playsound.i"
+	@echo "... src/playsound.s"
+	@echo "... src/scanner.o"
+	@echo "... src/scanner.i"
+	@echo "... src/scanner.s"
+	@echo "... src/serial.o"
+	@echo "... src/serial.i"
+	@echo "... src/serial.s"
 	@echo "... src/ultrasonic.o"
 	@echo "... src/ultrasonic.i"
 	@echo "... src/ultrasonic.s"

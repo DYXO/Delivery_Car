@@ -2,7 +2,8 @@
 
 ultrasonic::ultrasonic()
 {
-	gpio_init();
+	if(!gpioInitialise())
+		printf("erro!gpio_init failed!\n");
 }
 
 ultrasonic::~ultrasonic()

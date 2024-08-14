@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 	
 	while(1)
 	{
-		car.track_control();
+		car.track_control(0);
 		gpioSleep(PI_TIME_RELATIVE, 0, 50000); 
 	}
 	return 0;

@@ -2,6 +2,7 @@
 
 motor::motor()
 {
+	gpioCfgClock(5,0,0);
 	initstate=gpioInitialise();
 	if(!initstate)
 		printf("erro!gpio_init failed!\n");
@@ -10,7 +11,6 @@ motor::motor()
 motor::~motor()
 {
 	stop();
-	gpioTerminate();
 }
 
 void motor::set_speed(float leftspeed,float rightspeed)
