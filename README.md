@@ -34,3 +34,7 @@ sudo ./DeliveryRobot
 ![image](https://github.com/DYXO/Delivery_Car/blob/main/figure/infrared.jpg)
 ### motor driver
 ![image](https://github.com/DYXO/Delivery_Car/blob/main/figure/motordriver.jpg)
+
+## Media
+https://www.instagram.com/p/C-n34MBs34e/?igsh=MXh5bmt6bDdld2psMA==
+![image](https://github.com/DYXO/Delivery_Car/blob/main/figure/QRcode.jpg)
