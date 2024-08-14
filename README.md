@@ -71,6 +71,35 @@ line12:
 
 </details>
 
+## If gpio can't init
+<details>
+  <summary>expand</summary>
+  
+1.Find the process using the port
+  
+```
+sudo lsof -i :8888
+```
+
+2.Terminate the process using the port: Once you have identified the process using the port, you can terminate it with the following command:
+
+```
+sudo kill -9 <PID>
+```
+
+Replace <PID> with the actual Process ID.
+
+  
+3.Confirm the process has been terminated: Run the following command again to ensure no process is using port 8888:
+
+```
+sudo lsof -i :8888
+```
+
+run it again
+
+</details>
+
 ## Diagram of the hardware connection
 ![image](https://github.com/DYXO/Delivery_Car/blob/main/figure/Connection.png)
 
