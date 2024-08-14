@@ -11,7 +11,10 @@ git clone https://github.com/DYXO/Delivery_Car.git
 ```
 ### Step 3 cd to the directory
 ```
-cd build
+cd Delivery_Car
+```
+```
+mkdir build
 ```
 ### Step 4 build
 ```
