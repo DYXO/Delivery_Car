@@ -24,8 +24,13 @@ make
 sudo ./DeliveryRobot
 ```
 
-## Car chassis pictures
+## Diagram of the hardware connection
+![image](https://github.com/DYXO/Delivery_Car/blob/main/figure/Connection.png)
 
-![2](https://github.com/DYXO/Delivery_Car/assets/166942680/90b629d5-17f5-4ee4-8a55-03e151761e9a)
-
-
+## Diagram of the physical connection
+### ultrasonic
+![image](https://github.com/DYXO/Delivery_Car/blob/main/figure/ultrasonic.jpg)
+### infrared
+![image](https://github.com/DYXO/Delivery_Car/blob/main/figure/infrared.jpg)
+### motor driver
+![image](https://github.com/DYXO/Delivery_Car/blob/main/figure/motordriver.jpg)
