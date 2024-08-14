@@ -28,6 +28,36 @@ make
 sudo ./DeliveryRobot
 ```
 
+## If pcm erro
+1.Modify ALSA Configuration Files: Edit the ALSA configuration files to allow root access to audio devices. These files are usually located at /etc/asound.conf or ~/.asoundrc. Add or modify the following content:
+```
+pcm.!default {
+    type hw
+    card 0
+}
+
+ctl.!default {
+    type hw
+    card 0
+}
+```
+2.Adjust Device Permissions: Ensure that the audio device permissions allow root access. You can change the permissions with:
+```
+sudo chmod 666 /dev/snd/*
+```
+3.Use setuid: Set your program to run with root privileges using setuid. First, make sure your program is executable, then use the following commands:
+```
+sudo chown root:root your_program
+```
+```
+sudo chmod u+s your_program
+```
+Then try again
+## if still not work, just give up the sound 
+go to the branch IfAudioNotWork or you can just comment out this following lines in main
+```
+sudo chmod u+s your_program
+```
 ## Diagram of the hardware connection
 ![image](https://github.com/DYXO/Delivery_Car/blob/main/figure/Connection.png)
 
